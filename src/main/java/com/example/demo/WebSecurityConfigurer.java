@@ -38,7 +38,7 @@ public class WebSecurityConfigurer extends WebSecurityConfigurerAdapter {
 			.and()
 			.authorizeRequests()
 			.antMatchers("/api/message*").authenticated()
-			.antMatchers("/*").permitAll()
+			.antMatchers("/**").permitAll()
 			.and()
 			.formLogin()
 			.successHandler(restAuthenticationSuccessHandler)
